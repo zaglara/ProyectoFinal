@@ -62,6 +62,12 @@ class CategoriesFragment : Fragment(), View.OnClickListener {
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+        getEspecies()
+        getByCategory("1")
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

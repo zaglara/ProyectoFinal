@@ -54,6 +54,11 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+        getMostRecent()
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

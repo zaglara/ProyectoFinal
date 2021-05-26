@@ -46,6 +46,21 @@ class SavedPostsActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (uso == "null")
+            getSavedPosts(credential.user_id)
+        else if (uso == "retirados"){
+            Toast.makeText(this, uso, Toast.LENGTH_SHORT).show()
+            findViewById<TextView>(R.id.lblTitle_savedPosts).text = "Retirados"
+            getMyPosts(credential.user_id, "adoptado")
+        }
+        else if (uso == "borradores"){
+            findViewById<TextView>(R.id.lblTitle_savedPosts).text = "Borradores"
+            getDrafts(credential.user_id)
+        }
+    }
+
     private fun getDrafts(user: String) {
         val draftAdapter = DraftsAdapter(this, dbHelper.getListOfPost(credential.user_id))
         listGuardados.adapter = draftAdapter

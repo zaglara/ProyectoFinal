@@ -61,6 +61,12 @@ class MyPostsFragment : Fragment(), View.OnClickListener {
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+        val credential: Credential = UserApplication.prefs.getCredentials()
+        getMyPosts(credential.user_id, "publicado")
+    }
+
     private fun getMyPosts(user: String, status:String) {
         mService.getMyPosts(user, status)
                 .enqueue(object : Callback<APIResponse> {
