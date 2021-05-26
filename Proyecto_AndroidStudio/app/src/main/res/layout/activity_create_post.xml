@@ -330,14 +330,15 @@
                 android:id="@+id/btnImagenes_createPost"
                 android:layout_width="180dp"
                 android:layout_height="35dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/custom_button_circle"
                 android:paddingStart="10dp"
                 android:paddingEnd="5dp"
                 android:text="@string/tomar_foto"
                 app:drawableStartCompat="@drawable/ic_camera"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
 
+                app:layout_constraintHorizontal_bias="0.49"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LayoutImagenes_createPost" />
 
@@ -349,10 +350,11 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="5dp"
                 android:text="@string/agregar_imagen"
+                android:visibility="gone"
                 app:drawableStartCompat="@drawable/ic_search_image"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.9"
 
+                app:layout_constraintHorizontal_bias="0.9"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LayoutImagenes_createPost" />
 
@@ -360,6 +362,7 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="340dp"
                 android:layout_height="80dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

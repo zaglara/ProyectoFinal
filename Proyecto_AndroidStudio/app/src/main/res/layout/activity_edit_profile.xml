@@ -95,6 +95,7 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="5dp"
                 android:text="@string/cambiar_foto_de_perfil"
+                android:visibility="gone"
                 app:drawableStartCompat="@android:drawable/ic_menu_gallery"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
                 app:layout_constraintHorizontal_bias="0.538"
