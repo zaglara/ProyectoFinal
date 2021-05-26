@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MyPostsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mercury">
+
+    <LinearLayout
+        android:id="@+id/titlebarMyPostsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/yellow">
+
+
+        <TextView
+            android:id="@+id/lblTitle_myPosts"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/mis_publicaciones_"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            app:drawableStartCompat="@drawable/ic_pets"
+            android:drawablePadding="7dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblDescription_myPosts"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/en_adopcion"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/titlebarMyPostsFragment" />
+
+    <ListView
+        android:id="@+id/listPost_myPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAdd_myPosts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblDescription_myPosts"
+        tools:listitem="@layout/item_pet_card" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAdd_myPosts"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button_circle"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/nueva_publicacion"
+        app:drawableStartCompat="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listPost_myPosts" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDraft_myPosts"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/custom_button_circle"
+        android:paddingStart="10dp"
+        android:paddingEnd="1dp"
+        android:text="@string/borradores"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnAdd_myPosts"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd_myPosts"
+        app:layout_constraintVertical_bias="0.006" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRetired_myPosts"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/custom_button_circle"
+        android:paddingStart="10dp"
+        android:paddingEnd="1dp"
+        android:text="@string/retirados"
+        app:drawableStartCompat="@drawable/ic_list_checkmark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdd_myPosts"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnDraft_myPosts"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd_myPosts"
+        app:layout_constraintVertical_bias="0.006" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

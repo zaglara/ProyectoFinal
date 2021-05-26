@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imgIsotipo_login"
+        android:layout_width="300dp"
+        android:layout_height="266dp"
+        android:contentDescription="@string/imgdefaultdescription"
+        android:src="@drawable/img_imagotipo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/lblLogin_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgIsotipo_login"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtCorreo_login"
+        android:layout_width="323dp"
+        android:layout_height="39dp"
+        android:autofillHints="@string/nombre_de_usuario"
+        android:background="@drawable/custom_edittext"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="@string/escribe_tu_correo_ej"
+        android:inputType="textEmailAddress"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        app:drawableStartCompat="@drawable/custom_ic_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblLogin_login"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <EditText
+        android:id="@+id/txtPassword_login"
+        android:layout_width="323dp"
+        android:layout_height="39dp"
+        android:autofillHints="@string/nombre_de_usuario"
+        android:background="@drawable/custom_edittext"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="@string/contrasena"
+        android:inputType="textPassword"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        app:drawableStartCompat="@drawable/custom_ic_lock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo_login"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin_login"
+        android:layout_width="216dp"
+        android:layout_height="36dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/ingresar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword_login"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/lblBienvenida_login"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
+        android:text="@string/aun_no_tienes_cuenta"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin_login"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister_login"
+        android:layout_width="108dp"
+        android:layout_height="36dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/aqui"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBienvenida_login"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

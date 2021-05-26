@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mercury"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+
+            <LinearLayout
+                android:id="@+id/titlebarEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/yellow"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/lblTitle_editProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="7dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/editar_datos_del_perfil"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:drawableStartCompat="@drawable/ic_create_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="340dp"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titlebarEditProfile">
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgImagen_editProfile"
+                android:layout_width="157dp"
+                android:layout_height="152dp"
+                android:src="@drawable/img_profile_placeholder"
+                app:civ_border_color="@color/cyan"
+                app:civ_border_width="4dp"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnImagenPic_editProfile"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="116dp"
+                android:background="@drawable/custom_button_circle"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/cambiar_foto_de_perfil"
+                app:drawableStartCompat="@drawable/ic_camera"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+                app:layout_constraintStart_toEndOf="@+id/imgImagen_editProfile"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnImagenPic_editProfile2"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_button_circle"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/cambiar_foto_de_perfil"
+                app:drawableStartCompat="@android:drawable/ic_menu_gallery"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+                app:layout_constraintHorizontal_bias="0.538"
+                app:layout_constraintStart_toEndOf="@+id/imgImagen_editProfile"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/lblNombre_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/nombre____"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgImagen_editProfile" />
+
+            <EditText
+                android:id="@+id/txtNombre_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/default_info_placeholder"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblNombre_editProfile" />
+
+            <TextView
+                android:id="@+id/lblApellido_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/apellido_s____"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombre_editProfile" />
+
+            <EditText
+                android:id="@+id/txtApellido_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/default_info_placeholder"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblApellido_editProfile" />
+
+            <TextView
+                android:id="@+id/lblUsuario_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/nombre_de_usuario_____"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtApellido_editProfile" />
+
+            <EditText
+                android:id="@+id/txtUsuario_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/default_info_placeholder"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblUsuario_editProfile" />
+
+            <TextView
+                android:id="@+id/lblTelefono_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/n_mero_de_tel_fono____"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtUsuario_editProfile" />
+
+            <EditText
+                android:id="@+id/txtTelefono_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="phone"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/_0000000000_"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblTelefono_editProfile" />
+
+            <TextView
+                android:id="@+id/lblDireccion_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/_direccion_"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTelefono_editProfile" />
+
+            <EditText
+                android:id="@+id/txtDireccion_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/default_info_placeholder"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblDireccion_editProfile" />
+
+            <TextView
+                android:id="@+id/lblContrasena_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/contrase_a_nueva"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGuardar_editProfile" />
+
+            <EditText
+                android:id="@+id/txtContrasena_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="textPassword"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/default_info_placeholder"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblContrasena_editProfile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGuardar_editProfile"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/custom_button_circle"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/_guardar_cambios"
+                app:drawableStartCompat="@drawable/ic_check_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDireccion_editProfile" />
+
+            <EditText
+                android:id="@+id/txtContrasena2_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="35dp"
+                android:autofillHints=""
+                android:background="@drawable/custom_edittext"
+                android:ems="10"
+                android:hint="@string/no_puedes_deja_este_campo_vac_o"
+                android:inputType="textPassword"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/default_info_placeholder"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblContrasena2_editProfile" />
+
+            <TextView
+                android:id="@+id/lblContrasena2_editProfile"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/contrase_a_repetir"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtContrasena_editProfile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnActualizar_editProfile"
+                android:layout_width="230dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custom_button_circle"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/actualizar_contrase_a"
+                app:drawableStartCompat="@drawable/ic_check_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtContrasena2_editProfile" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

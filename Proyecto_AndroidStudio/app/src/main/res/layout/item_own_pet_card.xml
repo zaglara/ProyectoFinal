@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idFrameLayout_ownpetCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mercury">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cyan"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imgPic_ownpetCard"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="60dp"
+                android:contentDescription="@string/default_info_placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_item_card_placeholder" />
+
+            <TextView
+                android:id="@+id/lblEspecie_ownpetCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/especie_card"
+                android:textColor="@color/cyan"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imgPic_ownpetCard"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblDescripcion_ownpetCard"
+                android:layout_width="234dp"
+                android:layout_height="94dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/descripci_n_del_animal_card"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imgPic_ownpetCard"
+                app:layout_constraintTop_toBottomOf="@+id/lblEspecie_ownpetCard" />
+
+            <TextView
+                android:id="@+id/lblEdad_ownpetCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/edad_card"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.058"
+                app:layout_constraintStart_toEndOf="@+id/imgPic_ownpetCard"
+                app:layout_constraintTop_toBottomOf="@+id/lblDescripcion_ownpetCard"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditar_ownpetCard"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/editar_btn"
+                android:background="@drawable/custom_button_circle"
+                app:drawableStartCompat="@drawable/ic_edit"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/imgPic_ownpetCard"
+                app:layout_constraintTop_toBottomOf="@+id/lblEdad_ownpetCard" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEliminar_ownpetCard"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/eliminar_btn"
+                android:background="@drawable/custom_button_circle"
+                app:drawableStartCompat="@drawable/ic_delete"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/btnEditar_ownpetCard"
+                app:layout_constraintTop_toBottomOf="@+id/lblEdad_ownpetCard" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
