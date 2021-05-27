@@ -114,6 +114,7 @@
             android:paddingStart="10dp"
             android:paddingEnd="5dp"
             android:text=""
+            android:visibility="gone"
             app:drawableStartCompat="@android:drawable/ic_menu_gallery"
             app:layout_constraintEnd_toEndOf="@+id/lblProfilePicture_register"
             app:layout_constraintHorizontal_bias="0.0"
